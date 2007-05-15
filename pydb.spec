@@ -1,6 +1,6 @@
 Summary:	Extended debugger for python
 Name:		pydb
-Version:	1.21
+Version:	1.22
 Release:	%mkrel 1
 License:	GPL
 Group:		Development/Python
@@ -20,14 +20,16 @@ use with DDD, a graphical debugger front end.
 %setup -q
 
 %build
-%configure2_5x
+%configure2_5x 
 
 %make
 
 %install
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
-%makeinstall_std
+%makeinstall_std 
+ln -sf %{py_sitedir}/%{name}/%{name}.py %{buildroot}%{_bindir}/%{name} 
+rm -rf %{buildroot}%{_datadir}/emacs
 
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
@@ -35,11 +37,12 @@ use with DDD, a graphical debugger front end.
 %files
 %defattr(644,root,root,755)
 %doc README AUTHORS NEWS ChangeLog THANKS
-%dir %{_libdir}/python2.5/site-packages/%{name}
+%dir %{py_sitedir}/%{name}
 %attr(755,root,root) %{_bindir}/%{name}
-%{_libdir}/python2.5/site-packages/%{name}/*.py*
-%{_libdir}/python2.5/site-packages/%{name}/*.doc
-#%exclude %{_datadir}/emacs/site-lisp/*.el*
-%{_mandir}/man1/pydb.1.bz2
+%attr(755,root,root) %{py_sitedir}/%{name}/%{name}.py
+%{py_sitedir}/%{name}/*.py*
+%{py_sitedir}/%{name}/*.doc
+#%{_datadir}/emacs/site-lisp/*.el*
+%{_mandir}/man1/pydb.1.*
 
 
