@@ -28,7 +28,7 @@ use with DDD, a graphical debugger front end.
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
 %makeinstall_std 
-ln -sf %{py_sitedir}/%{name}/%{name}.py %{buildroot}%{_bindir}/%{name} 
+ln -sf %{_libdir}/python%{py_ver}/site-packages%{name}/%{name}.py %{buildroot}%{_bindir}/%{name} 
 rm -rf %{buildroot}%{_datadir}/emacs
 
 %clean
@@ -39,10 +39,9 @@ rm -rf %{buildroot}%{_datadir}/emacs
 %doc README AUTHORS NEWS ChangeLog THANKS
 %dir %{py_sitedir}/%{name}
 %attr(755,root,root) %{_bindir}/%{name}
-%attr(755,root,root) %{py_sitedir}/%{name}/%{name}.py
-%{py_sitedir}/%{name}/*.py*
-%{py_sitedir}/%{name}/*.doc
-#%{_datadir}/emacs/site-lisp/*.el*
+%attr(755,root,root) %{_libdir}/python%{py_ver}/site-packages/%{name}/%{name}.py
+%{_libdir}/python%{py_ver}/site-packages/%{name}/*.py*
+%{_libdir}/python%{py_ver}/site-packages/%{name}/*.doc
 %{_mandir}/man1/pydb.1.*
 
 
