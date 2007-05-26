@@ -37,11 +37,8 @@ rm -rf %{buildroot}%{_datadir}/emacs
 %files
 %defattr(644,root,root,755)
 %doc README AUTHORS NEWS ChangeLog THANKS
-%dir %{py_sitedir}/%{name}
 %attr(755,root,root) %{_bindir}/%{name}
 %attr(755,root,root) %{_libdir}/python%{py_ver}/site-packages/%{name}/%{name}.py
 %{_libdir}/python%{py_ver}/site-packages/%{name}/*.py*
 %{_libdir}/python%{py_ver}/site-packages/%{name}/*.doc
 %{_mandir}/man1/pydb.1.*
-
-
