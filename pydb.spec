@@ -1,7 +1,7 @@
 Summary:	Extended debugger for python
 Name:		pydb
 Version:	1.22
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPL
 Group:		Development/Python
 Url:		http://bashdb.sourceforge.net/pydb/
@@ -28,7 +28,7 @@ use with DDD, a graphical debugger front end.
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
 %makeinstall_std 
-ln -sf %{_libdir}/python%{py_ver}/site-packages%{name}/%{name}.py %{buildroot}%{_bindir}/%{name} 
+ln -sf %{_libdir}/python%{py_ver}/site-packages/%{name}/%{name}.py %{buildroot}%{_bindir}/%{name} 
 rm -rf %{buildroot}%{_datadir}/emacs
 
 %clean
