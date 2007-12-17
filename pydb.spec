@@ -8,7 +8,6 @@ Url:		http://bashdb.sourceforge.net/pydb/
 Source0:	http://downloads.sourceforge.net/bashdb/%{name}-%{version}.tar.bz2
 BuildRequires:	python-devel
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 An enhanced Python command-line debugger Pydb is a command-line
