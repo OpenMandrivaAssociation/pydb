@@ -1,7 +1,7 @@
 Summary:	Extended debugger for Python
 Name:		pydb
 Version:	1.23
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPLv3
 Group:		Development/Python
 Url:		http://bashdb.sourceforge.net/pydb/
