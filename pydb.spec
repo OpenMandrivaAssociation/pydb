@@ -1,12 +1,11 @@
 Summary:	Extended debugger for Python
 Name:		pydb
-Version:	1.23
-Release:	%mkrel 3
+Version:	1.24
+Release:	%mkrel 1
 License:	GPLv3
 Group:		Development/Python
 Url:		http://bashdb.sourceforge.net/pydb/
-Source0:	http://downloads.sourceforge.net/bashdb/%{name}-%{version}.tar.bz2
-Patch0:		%{name}-1.23-include_location.patch
+Source0:	http://downloads.sourceforge.net/bashdb/%{name}-%{version}.tar.lzma
 BuildRequires:	python-devel
 BuildArch: 	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
@@ -19,7 +18,6 @@ end.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %configure2_5x --with-site-packages=%{py_sitedir}
