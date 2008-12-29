@@ -1,11 +1,11 @@
 Summary:	Extended debugger for Python
 Name:		pydb
-Version:	1.24
+Version:	1.25
 Release:	%mkrel 1
 License:	GPLv3
 Group:		Development/Python
 Url:		http://bashdb.sourceforge.net/pydb/
-Source0:	http://downloads.sourceforge.net/bashdb/%{name}-%{version}.tar.lzma
+Source0:	http://downloads.sourceforge.net/bashdb/%{name}-%{version}.tar.bz2
 BuildRequires:	python-devel
 BuildArch: 	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
