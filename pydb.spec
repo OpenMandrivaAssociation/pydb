@@ -1,6 +1,6 @@
 Summary:	Extended debugger for Python
 Name:		pydb
-Version:	1.25
+Version:	1.26
 Release:	%mkrel 1
 License:	GPLv3
 Group:		Development/Python
