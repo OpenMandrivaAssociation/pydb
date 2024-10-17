@@ -4,7 +4,7 @@ Version:	1.26
 Release:	4
 License:	GPLv3
 Group:		Development/Python
-Url:		http://bashdb.sourceforge.net/pydb/
+Url:		https://bashdb.sourceforge.net/pydb/
 Source0:	http://downloads.sourceforge.net/bashdb/%{name}-%{version}.tar.bz2
 BuildRequires:	python-devel
 BuildArch: 	noarch
